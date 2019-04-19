@@ -1,15 +1,15 @@
 
 {%block body%}
 <div class="container">
-
+<h1>Welcome</h1>
+<h2>You can log in here .. </h2>
 
 <form method="post">
 
   {% csrf_token %}
   {{ form.as_p }}
 
-  <a class="btn btn-primary btn-lg" href="/account/profile" role="button">Login</a>
-
+<button type="submit">Login</button>
 </form>
 </div>
 
