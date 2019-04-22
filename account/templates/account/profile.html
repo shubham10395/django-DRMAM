@@ -6,7 +6,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<<title>profile</title>>
+<title>profile</title>
 
   </head>
 
@@ -16,14 +16,14 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-
+      {% if user.is_superuser %}
       <li class="nav-item dropdown">
        <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         LAB INFO
+         Admin Panel
        </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <a class="dropdown-item" href="#">LAB 1</a>
-         <a class="dropdown-item" href="#">LAB 2</a>
+         <a class="dropdown-item" href="/admin/account/labinfo/1/change/">LAB 1</a>
+         <a class="dropdown-item" href="/admin/account/labinfo/2/change/">LAB 2</a>
          <a class="dropdown-item" href="#">LAB 3</a>
          <a class="dropdown-item" href="#">LAB 4</a>
          <a class="dropdown-item" href="#">LAB 5</a>
@@ -32,18 +32,51 @@
          <a class="dropdown-item" href="#">LAB 8</a>
          <a class="dropdown-item" href="#">LAB 9</a>
          <a class="dropdown-item" href="#">LAB 10</a>
+         <a class="dropdown-item" href="#">LECTURE HALL 405</a>
+         <a class="dropdown-item" href="#">LECTURE HALL 406B</a>
+         <a class="dropdown-item" href="#">LECTURE HALL 307</a>
+         <a class="dropdown-item" href="#">LECTURE HALL 308</a>
+         <a class="dropdown-item" href="#">LECTURE HALL 209</a>
+         <a class="dropdown-item" href="#">LECTURE HALL OCC</a>
 
      </li>
+     {% endif %}
+
+
      <li class="nav-item dropdown">
+      <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        LAB INFO
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/account/lab">LAB 1</a>
+        <a class="dropdown-item" href="#">LAB 2</a>
+        <a class="dropdown-item" href="#">LAB 3</a>
+        <a class="dropdown-item" href="#">LAB 4</a>
+        <a class="dropdown-item" href="#">LAB 5</a>
+        <a class="dropdown-item" href="#">LAB 6</a>
+        <a class="dropdown-item" href="#">LAB 7</a>
+        <a class="dropdown-item" href="#">LAB 8</a>
+        <a class="dropdown-item" href="#">LAB 9</a>
+        <a class="dropdown-item" href="#">LAB 10</a>
+
+     </li>
+
+
+
+
+     <li class="nav-item dropdown">
+
       <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         CLASSROOM INFO
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+        <a class="dropdown-item" href="#">LECTURE HALL 405</a>
+        <a class="dropdown-item" href="#">LECTURE HALL 406B</a>
+        <a class="dropdown-item" href="#">LECTURE HALL 307</a>
+        <a class="dropdown-item" href="#">LECTURE HALL 308</a>
+        <a class="dropdown-item" href="#">LECTURE HALL 209</a>
+        <a class="dropdown-item" href="#">LECTURE HALL OCC</a>
+
     </li>
         <a class="navbar-brand" href="#">SUBSCRIPTIONS</a>
         <a class="navbar-brand" href="#">FORMS</a>

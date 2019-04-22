@@ -1,0 +1,60 @@
+
+.. _1-0-release-notes:
+
+=========
+South 1.0
+=========
+
+This is the last major release of South, as migrations have been
+`rolled into Django itself <https://docs.djangoproject.com/en/dev/topics/migrations/>`_
+as part of the 1.7 release, and my efforts are now concentrated there. South
+will continue to receive security updates but no feature updates will be
+provided.
+
+An upgrade path is provided for those moving from South to the new-style
+migrations; more details are available
+`in the Django documentation <https://docs.djangoproject.com/en/dev/topics/migrations/#upgrading-from-south>`_.
+The migrations framework in 1.7 is based on South but with significant
+design and stability improvements that were only possible after modifying
+Django itself; the result is a world-class schema migration system.
+
+I'd like to thank all the contributors to South over the years for their
+work in helping me keep everything together, and all the South users for
+making a small side project I started in 2007 (eight years ago at the time
+of writing) into one of the most popular Django apps of all time.
+
+
+Backwards incompatible changes
+==============================
+
+None (it would be a really nasty time to introduce these)
+
+
+Library migration path
+======================
+
+As part of providing a migration path for authors of third-party apps
+and libraries for Django, South will now first look for migrations in the
+``south_migrations`` directory, and then fall back to the ``migrations``
+directory if this is not found.
+
+This is intended to alleviate the namespace clash between South and Django
+migrations; prior to this, both were looking for a directory called
+``migrations``, and so it was impossible to ship a third-party app with support
+for both South and Django 1.7.
+
+The recommendation is that you move your South migrations into the
+``south_migrations`` directory (existing users will not notice the change
+if they upgrade South first), and then start a new set of Django 1.7
+migrations in a ``migrations`` directory (the default).
+
+If your users are stubborn and refuse to upgrade South, they may instead
+change the ``SOUTH_MIGRATION_MODULES`` setting for your app to point to
+the new ``south_migrations`` directory.
+
+This does obviously entail keeping two sets of migrations around, but
+the two systems have some fundamental differences that mean it was impossible
+to have one solution that would work across both codebases. At the end
+of the day, this allows you to interact with each migrations system on its
+own level, rather than some third abstraction layer that would probably be
+the worst of both worlds.

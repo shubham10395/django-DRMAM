@@ -1,0 +1,55 @@
+
+.. _0-8-3-release-notes:
+
+===========
+South 0.8.3
+===========
+
+This is the third bugfix release in the 0.8 series.
+
+Major changes are outlined below. A full list of changes can be found on
+`the repository <https://bitbucket.org/andrewgodwin/south/commits/all/>`_.
+
+Please note that the 0.8.x series is the last major release branch of South 1;
+it will be superceded by South 2 in the coming months, which will be a
+forwards-compatable backport of the new Django 1.7 migrations code for Django
+1.4, 1.5 and 1.6. A full migration path will, of course, be provided.
+
+
+Django 1.6 support
+==================
+
+A couple of issues with Django 1.6 have been fixed (including bad error
+handling and a loaddata incompatability)
+
+
+Timezone-aware DateTimeFields no longer issue warnings
+======================================================
+
+Migrations now import datetime from a special South module which provides
+the correct tz-aware or tz-naive version.
+
+
+SQLite
+======
+
+A couple of issues fixed, including double-indexing errors, and  correct
+persistence of non-unique indexes across ALTERs.
+
+
+Localflavor
+===========
+
+The new localflavor fields are automatically accepted by the introspector.
+
+
+Oracle
+======
+
+Foreign keys are now updated during an alter_column call.
+
+
+Firebird
+========
+
+A couple of small fixes and documentation patch-ups.

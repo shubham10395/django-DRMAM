@@ -1,0 +1,24 @@
+
+.. _0-8-4-release-notes:
+
+===========
+South 0.8.4
+===========
+
+This is the fourth bugfix release in the 0.8 series.
+
+Major changes are outlined below. A full list of changes can be found on
+`the repository <https://bitbucket.org/andrewgodwin/south/commits/all/>`_.
+
+Please note that the 0.8.x series is the last major release branch of South 1;
+it will be superceded by South 2 in the coming months, which will be a
+forwards-compatable backport of the new Django 1.7 migrations code for Django
+1.4, 1.5 and 1.6. A full migration path will, of course, be provided.
+
+
+Fixture loading issues fixed
+============================
+
+A regression in 0.8.3 meant that fixtures referring to models outside
+of the app they were in, and some other references to custom user models,
+were broken. This should now be fixed.

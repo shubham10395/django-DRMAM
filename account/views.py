@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login
-
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from account.models import labinfo
 
 
 def Home(request):
@@ -24,3 +26,20 @@ def register(request):
 def profile(request):
 
     return render(request,'account/profile.html')
+
+def lab(request):
+
+    obj = labinfo.objects.get(id=1)
+    context = {
+        'lab_incharge':obj.lab_incharge,
+        'no_of_pc':obj.no_of_pc,
+        'name_of_os':obj.name_of_os
+
+    }
+
+
+
+
+
+#    args = {'user': request.user}
+    return render(request, 'account/labs.html', context)

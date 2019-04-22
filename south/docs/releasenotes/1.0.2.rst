@@ -1,0 +1,10 @@
+
+.. _1-0-2-release-notes:
+
+===========
+South 1.0.2
+===========
+
+This is a small bugfix release of South with one change:
+
+- Fix discovery of ``south_migrations`` directory during testing.

@@ -9,6 +9,8 @@ urlpatterns = [
     #url(r'^login/$', views.login, name='login'),
     url(r'^login/$', login, {'template_name':'account/login.html'}),
     url(r'^Signup/$', views.register, name='register'),
-    url(r'^profile/$', views.profile, name='profile')
+    url(r'^profile/$', views.profile, name='profile'),
+    url(r'^lab/$', views.lab, name='lab'),
+
 
 ]

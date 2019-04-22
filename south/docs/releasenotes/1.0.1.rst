@@ -1,0 +1,14 @@
+
+.. _1-0-1-release-notes:
+
+===========
+South 1.0.1
+===========
+
+This is a small bugfix release of South with two changes:
+
+- Python 3 compatability has been fixed (it was broken in 1.0 by an accidental
+  introduction of ``iteritems()``)
+
+- South will explicitly error if it detects Django 1.7 or above rather than
+  failing with cryptic errors.
