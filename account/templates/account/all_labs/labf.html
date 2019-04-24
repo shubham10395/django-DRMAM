@@ -14,11 +14,19 @@
   <body>
 
 <body>
+
+  <!-- As a heading -->
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </nav>
+
 {% block content %}
 
 <h1> Lab InCharge : {{ lab_incharge }} </h1>
 <h1> Number of PC : {{ no_of_pc }} </h1>
 <h1> OS Used In Lab : {{ name_of_os }} </h1>
+<h1> RAM available in computers : {{ ram }} </h1>
+<h1> Available Storage : {{ starage }}</h1>
 
 {% endblock %}
 </body>

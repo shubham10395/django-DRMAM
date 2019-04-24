@@ -16,4 +16,5 @@ class classinfo(models.Model):
     #student= models.OneToOneField(labinfo,on_delete=models.CASCADE)
     strength = models.IntegerField(default=1)
     projector = models.CharField(max_length=250)
+    description = models.TextField(blank=True,null=True)
     #user_id = models.IntegerField()
