@@ -16,8 +16,15 @@ urlpatterns = [
     url(r'^labfi/$', views.labfi, name='labfi'),
     url(r'^labsi/$', views.labsi, name='labsi'),
     url(r'^labse/$', views.labse, name='labse'),
+    url(r'^labe/$', views.labe, name='labe'),
+    url(r'^labn/$', views.labn, name='labn'),
+    url(r'^labt/$', views.labt, name='labt'),
+
     url(r'^classroom/$', views.classroom, name='classroom'),
-
-
+    url(r'^crt/$', views.crt, name='crt'),
+    url(r'^crth/$', views.crth, name='crth'),
+    url(r'^crf/$', views.crf, name='crf'),
+    url(r'^crfi/$', views.crfi, name='crfi'),
+    url(r'^crs/$', views.crs, name='crs'),
 
 ]

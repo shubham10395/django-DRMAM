@@ -17,18 +17,27 @@
 
   <!-- As a heading -->
   <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">Navbar</span>
+    <span class="navbar-brand mb-0 h1">Project Lab</span>
   </nav>
-
+  <br>
+  <br>
+  <br>
+  <br>
 {% block content %}
 
-<h1> Lab InCharge : {{ lab_incharge }} </h1>
-<h1> Number of PC : {{ no_of_pc }} </h1>
-<h1> OS Used In Lab : {{ name_of_os }} </h1>
-<h1> RAM available in computers : {{ ram }} </h1>
-<h1> Available Storage : {{ starage }}</h1>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Lab InCharge : {{ lab_incharge }}</li>
+  <li class="list-group-item">Number of PC : {{ no_of_pc }} </li>
+  <li class="list-group-item">OS Used In Lab : {{ name_of_os }}</li>
+  <li class="list-group-item">RAM available in computers : {{ ram }} GB</li>
+  <li class="list-group-item">Available Storage : {{ starage }} GB</li>
+</ul>
 
 {% endblock %}
+
+
+
+
 </body>
 
 

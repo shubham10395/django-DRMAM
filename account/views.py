@@ -125,6 +125,47 @@ def labse(request):
 
     return render(request, 'account/all_labs/labse.html', context)
 
+def labe(request):
+
+    obj8 = labinfo.objects.get(id=8)
+    context = {
+        'lab_incharge':obj8.lab_incharge,
+        'no_of_pc':obj8.no_of_pc,
+        'name_of_os':obj8.name_of_os,
+        'ram':obj8.ram,
+        'starage':obj8.starage
+
+    }
+
+    return render(request, 'account/all_labs/labe.html', context)
+
+def labn(request):
+
+    obj9 = labinfo.objects.get(id=9)
+    context = {
+        'lab_incharge':obj9.lab_incharge,
+        'no_of_pc':obj9.no_of_pc,
+        'name_of_os':obj9.name_of_os,
+        'ram':obj9.ram,
+        'starage':obj9.starage
+
+    }
+
+    return render(request, 'account/all_labs/labn.html', context)
+
+def labt(request):
+
+    obj10 = labinfo.objects.get(id=10)
+    context = {
+        'lab_incharge':obj10.lab_incharge,
+        'no_of_pc':obj10.no_of_pc,
+        'name_of_os':obj10.name_of_os,
+        'ram':obj10.ram,
+        'starage':obj10.starage
+
+    }
+
+    return render(request, 'account/all_labs/labt.html', context)
 
 
 def classroom(request):
@@ -139,3 +180,68 @@ def classroom(request):
     }
 
     return render(request,'account/classrooms/classroom_one.html', context)
+
+def crt(request):
+
+    obj2 = classinfo.objects.get(id=2)
+    context = {
+        'strength':obj2.strength,
+        'projector':obj2.projector,
+        'description':obj2.description
+
+
+    }
+
+    return render(request,'account/classrooms/crt.html', context)
+
+def crth(request):
+
+    obj3 = classinfo.objects.get(id=3)
+    context = {
+        'strength':obj3.strength,
+        'projector':obj3.projector,
+        'description':obj3.description
+
+
+    }
+
+    return render(request,'account/classrooms/crth.html', context)
+
+def crf(request):
+
+    obj4 = classinfo.objects.get(id=4)
+    context = {
+        'strength':obj4.strength,
+        'projector':obj4.projector,
+        'description':obj4.description
+
+
+    }
+
+    return render(request,'account/classrooms/crf.html', context)
+
+def crfi(request):
+
+    obj5 = classinfo.objects.get(id=5)
+    context = {
+        'strength':obj5.strength,
+        'projector':obj5.projector,
+        'description':obj5.description
+
+
+    }
+
+    return render(request,'account/classrooms/crfi.html', context)
+
+def crs(request):
+
+    obj6 = classinfo.objects.get(id=6)
+    context = {
+        'strength':obj6.strength,
+        'projector':obj6.projector,
+        'description':obj6.description
+
+
+    }
+
+    return render(request,'account/classrooms/crs.html', context)
